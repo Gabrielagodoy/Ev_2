@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
+    <title>Compañera misma generación</title>
   </head>
   <body>
     <div class="container">
       <div class="row py-5">
         <div class="col-11 col-sm-10 mx-auto">
-          <h1>Hello, world!</h1>  
+          <h1>Compañera misma generación</h1> 
+          <p class="lead"> Elegí una persona de mi misma generación: 2014. </p>
+           <div id="cuestiones">
+        </div>   
         </div>  
       </div>      
     </div>
@@ -28,7 +31,21 @@
     <!-- después de ir por las bibliotecas, puedes aprovecharlas-->
     <script>
       //en el código fuente, h1 contiene un mensaje distinto del que se ve
-      $("h1").text("Hola mundo!");
+      $("h1").text("Sofía Hinostroza");
+
+       $.getJSON( "https://raw.githubusercontent.com/profesorfaco/dno037-2019/gh-pages/portfolio.json", function( curso ) {
+
+          $.each(curso[9].trabajos, function(i, trabajo) {
+            $("#cuestiones")
+            .append("<h5 class='border-bottom my-2 py-3 pl-2'>" + trabajo.titulo + "</h5>")
+            .append("<img src='"+ trabajo.imagen +"' class='img-fluid border-bottom pb-3 mb-3'>")
+            .append("<h6 class= 'border-bottom my-2 py-2 -pl-2'>"+ trabajo.descriptor +"</h6>");
+
+             });
+
+          });
+      
+
     </script>
   </body>
 </html>

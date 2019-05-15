@@ -1,17 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
    
+
+html, body{
+	min-height:100%;
+} 
+
 body{
 	background:#DBF4F7;
+
 }    
 
+h1{
+	font-family: 'Raleway', sans-serif, font-style: extra-bold;
+	font-weight: 800;
+	color: #EDB570;
+}
+
 h2{
-	font-family: 'Raleway', sans-serif;
-	font-weight: 400;
+	font-family: 'Raleway', sans-serif, font-style: bold;
+	font-weight: 700;
 }
 
 h5{
+	font-family: 'Raleway', sans-serif, font-style:semi-bold;
+	font-weight: 600;
+}
+
+h6{
 	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
+	font-weight: 400;
+
 }
 
 #menu{
